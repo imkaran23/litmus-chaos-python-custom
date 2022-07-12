@@ -34,13 +34,14 @@ WORKDIR /litmus
 COPY . .
 
 # Setup requirements
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 RUN python3 setup.py install
 
 WORKDIR /litmus/byoc
 
 # Setup requirements for byoc
 RUN chmod +x install.sh
+RUN ls
 RUN ./install.sh
 
 WORKDIR /litmus

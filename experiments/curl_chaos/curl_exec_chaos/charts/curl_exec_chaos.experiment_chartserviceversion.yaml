@@ -1,0 +1,33 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: curl_exec_chaos 
+  version: 0.1.0
+  annotations:
+    categories: curl_chaos
+spec:
+  displayName: curl_exec_chaos 
+  categoryDescription: >
+    it execs inside target pods to run the chaos inject commands, waits for the chaos duration and reverts the chaos 
+  keywords: 
+    - "pods" 
+    - "kubernetes" 
+    - "sample-category" 
+    - "exec" 
+  platforms: 
+    - "Minikube" 
+  maturity: alpha
+  maintainers: 
+  minKubeVersion: 1.12.0 
+  provider: 
+    name: ChaosNative
+  labels:
+    app.kubernetes.io/component: chartserviceversion
+    app.kubernetes.io/version: latest
+  links: 
+    - name:Documentation 
+      url:https://docs.litmuschaos.io/docs/getstarted/ 
+  icon:
+    - url: 
+      mediatype: ""
+  chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/curl_chaos/curl_exec_chaos/experiment.yaml

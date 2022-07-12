@@ -1,0 +1,22 @@
+# Jinja template for ChaosResult
+---
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosResult
+metadata:
+    name: "curl-exec-chaos"
+    namespace: "litmus"
+    labels: {'name': 'curl-exec-chaos', 'chaosUID': ''}
+spec:
+    engine: ""
+    experiment: "curl-exec-chaos"
+    instance: ""
+status:
+    experimentStatus: 
+        phase: "Completed"
+        verdict: "Pass"
+        probeSuccessPercentage: "100"
+        failStep: "N/A"
+    history:
+        passedRuns: 1
+        failedRuns: 0
+        stoppedRuns: 0

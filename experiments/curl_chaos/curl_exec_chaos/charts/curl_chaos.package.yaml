@@ -1,0 +1,5 @@
+packageName: curl_chaos
+experiments:
+  - name: curl_exec_chaos
+    CSV: curl_exec_chaos.chartserviceversion.yaml
+    desc: "curl_exec_chaos"
