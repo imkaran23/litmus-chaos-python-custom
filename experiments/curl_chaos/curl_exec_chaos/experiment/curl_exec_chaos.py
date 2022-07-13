@@ -82,7 +82,7 @@ def Experiment(clients):
                                aws_secret_access_key=experimentsDetails.AWSSecretAccessKey,
                                region_name=experimentsDetails.KafkaAwsRegion)
 
-        random_number = randrange(1, 2)
+        random_number = randrange(1, 3)
 
         response = msk.reboot_broker(
             BrokerIds=[
